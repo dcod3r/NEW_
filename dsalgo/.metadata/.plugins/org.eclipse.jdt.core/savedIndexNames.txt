@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\Assignment Solution for computer\dsalgo\.metadata\.plugins\org.eclipse.jdt.core
+3086198347.index
+1865797976.index
+1924477252.index
+772910546.index
+4277812741.index
+2420995280.index
+2234634515.index

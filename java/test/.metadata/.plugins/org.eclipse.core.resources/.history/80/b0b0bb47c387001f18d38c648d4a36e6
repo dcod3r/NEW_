@@ -1,0 +1,17 @@
+package com.sun.entity;
+
+public class Employee {
+
+	int empid;
+	String name;
+	double salary;
+	
+	Employee(){}
+
+	public Employee(int empid, String name, double salary) {
+		this.empid = empid;
+		this.name = name;
+		this.salary = salary;
+	}
+	
+}

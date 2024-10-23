@@ -1,0 +1,16 @@
+package assigment3_2;
+
+public class EmployeeTest {
+	public static void main(String[] args) {
+		// Create two Employee objects
+        Employee employee1 = new Employee("Franziska", "Waltraud", 4000);
+        Employee employee2 = new Employee("Hubertus", "Andrea", 6000);
+        
+        // Display each employee's yearly salary
+        System.out.println("Yearly salary of " + employee1.getFirstName() + " "
+                + employee1.getLastName() + ": " + employee1.getYearlySalary());
+        
+        System.out.println("Yearly salary of " + employee2.getFirstName() + " "
+                + employee2.getLastName() + ": " + employee2.getYearlySalary());
+	}
+}

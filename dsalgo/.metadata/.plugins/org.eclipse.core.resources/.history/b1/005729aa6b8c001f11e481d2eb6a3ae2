@@ -1,0 +1,90 @@
+package Assignment_3_1;
+
+class List
+{
+	static class Node
+	{
+		int data;
+		Node next;
+		
+		public Node(int data) {
+			this.data = data;
+			next = null;
+		}
+	}
+	
+	private Node head;
+	private Node tail;
+	
+	public List() {
+		head = null;
+	}
+	
+	public boolean isEmpty()
+	{
+		return head == null;
+	}	
+	public void addFirst(int value)
+	{
+		Node newnode = new Node(value);
+		
+		if(head == null )
+		{
+			head = newnode;
+			tail = newnode;
+		}
+		else
+		{
+			newnode.next = head;
+			head = newnode;
+		}
+	}
+	
+	public void addLast(int value)
+	{
+		Node newnode = new Node(value);
+		
+		if(head == null)
+		{
+			head = newnode;
+			tail = newnode;
+		}
+		else
+		{
+			tail.next = newnode;
+			tail = newnode;
+		}
+	}
+	
+	public void addPosition(int value, int pos)
+	{
+		Node newnode = new Node(value);
+		
+		if(head == null)
+		{
+			head = newnode;
+			tail = newnode;
+		}
+		else  if(pos <= 1)
+			addFirst(value);
+		else
+		{
+			//pending
+		}
+	}
+	public void display()
+	{
+		Node trav = head;
+		System.out.println("List : ");
+		
+		while(trav != null)
+		{
+			System.out.println(" " + trav.data);
+			trav = trav.next;
+		}
+		System.out.println();
+	}
+}
+public class SLLinkedList {
+
+}

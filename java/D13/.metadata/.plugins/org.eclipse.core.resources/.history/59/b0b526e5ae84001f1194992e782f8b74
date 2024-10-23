@@ -1,0 +1,59 @@
+package com.me;
+
+import java.util.Scanner;
+
+	interface Shape
+	{
+		
+		void accept(Scanner sc);
+		
+		void calcArea();
+		
+		default void calcPeri() {	
+			
+		}
+	}
+	
+	static Shape ShapeFactory(int choice)
+	{
+		switch(choice ) {
+			case 1:
+				return new Circle();
+			case 2:
+				return new Rectanlge();		
+		}
+		return null;
+	}
+	
+	class Circle implements Shape{
+		int radius;
+		@Override
+		public void accept(Scanner sc) {
+			System.out.println("Enter Radius : ");
+			radius = sc.nextInt();
+		}
+
+		@Override
+		public void calcArea() {
+			System.out.println("Area of Cicle = " + 3.14 * radius *  radius);
+		}
+		
+	}
+	class Rectanlge implements Shape{
+		int length;
+		int breadth;
+		
+		@Override
+		public void accept(Scanner sc) {
+			System.out.println("Enter length");
+			length = sc.nextInt();
+			System.out.println("Enter Breadth");
+			breadth = sc.nextInt();
+		}
+		@Override
+		public void calcArea() {
+			System.out.println("Area of Rectangle = " + length * breadth);	
+		}
+	}
+	public class practice {
+}

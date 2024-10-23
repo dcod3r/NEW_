@@ -1,0 +1,12 @@
+package com.practice.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class InsertUsingJava {
+	public static void main(String[] args) {
+		
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classwork","D6_87015_Pawan","password");
+		
+	}
+}

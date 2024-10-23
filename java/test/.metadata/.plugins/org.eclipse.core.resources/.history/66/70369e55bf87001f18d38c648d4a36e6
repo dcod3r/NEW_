@@ -1,0 +1,18 @@
+package com.sun.dao;
+
+import java.sql.Connection;
+import com.sun.util.*;
+public class EmployeeDao implements AutoCloseable{
+
+	private Connection connection;
+
+	public EmployeeDao() {
+		connection = Dbutil.
+	}
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

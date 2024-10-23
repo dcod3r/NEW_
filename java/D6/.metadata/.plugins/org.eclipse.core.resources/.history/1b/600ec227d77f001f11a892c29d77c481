@@ -1,0 +1,37 @@
+package com.app.fruits;
+
+public class Fruits {
+
+	private String color;
+	private double weight;
+	private String name;
+	private boolean isFresh = true;
+	
+	public Fruits() {
+		this.color = null;
+		this.weight = 0.0;
+		this.name = null;
+		this.isFresh = true;
+	}
+	public Fruits(String color, double weight, boolean isFresh) {
+		this.color = color;
+		this.weight = weight;
+		this.isFresh = isFresh;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Fruits [color=" + color + ", weight=" + weight + ", name=" + name + ", isFresh=" + isFresh + "]";
+	}
+	
+	public String taste()
+	{ 
+		return "no specific taste";
+	}
+}

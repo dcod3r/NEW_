@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.stream.Stream;
+
+public class StreamOpertaions {
+
+	public static void main(String[] args) {
+		
+		//Using Stream.of(); for creating Stream object
+		System.out.println("s1");
+		Stream<Integer> s1 = Stream.of(1,2,3,4,5,6,7,8,9,10);
+		s1.forEach(s -> System.out.print(s + " ")); //forEach use for Printing
+		
+		//Filtering Even nos. in Stream
+		System.out.println("\n\ns2\nFlitering even");
+		Stream<Integer> s2 = Stream.of(1,2,3,4,5,6,7,8,9,10);
+		s2.filter(e -> e%2 == 0).forEach(e -> System.out.print(e + " "));
+		
+		//count() is use to count() the no of elements in the stream
+		System.out.println("\n\ns3");
+		Stream<Integer> s3 = Stream.of(1,2,3,4,5,6,7,8,9,10);
+		System.out.println("The number of Elements in Steam = " + s3.count());
+		
+		//Printing Distinct values
+		System.out.println("\ns4\nPrinting Distinct values");
+		Stream<Integer> s4 = Stream.of(7, 3, 5, 7, 5, 2, 1, 4, 1);
+		s4.distinct().forEachOrdered(e -> System.out.print(e + " "));
+		
+		//Created Anonymous class and applied stream() operation on it
+		System.out.println("\n\ns5");
+		System.out.println("Anonymous Class");
+		new ArrayList<Integer>(){{
+	        add(1);
+	        add(2);
+	        add(3);
+	        add(4);
+	        add(5);
+	           }}.stream().limit(3).forEach(System.out::println);
+	}
+
+}

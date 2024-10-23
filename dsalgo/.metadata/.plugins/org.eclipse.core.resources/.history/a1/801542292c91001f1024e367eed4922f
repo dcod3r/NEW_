@@ -1,0 +1,59 @@
+package Assignment_7_3;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class WordCountInFile {
+
+    // Method to create a sample file with content
+    private static void createSampleFile(String filePath) throws IOException {
+        File file = new File(filePath);
+
+        if (!file.exists()) {
+            System.out.println("Sample file not found, creating a new one...");
+            try (FileWriter writer = new FileWriter(file)) {
+                writer.write("Hello, this is a sample text file.\n");
+                writer.write("This file contains words and some sentences.\n");
+                writer.write("Words may repeat, repeat again, and again.\n");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String filePath = "C:\\Assignment Solution for computer\\dsalgo\\Assignment\\src\\Assignment_7_3\\sample.txt"; // Replace with your file path or use this relative path
+
+        // Create a HashMap to store word counts
+        Map<String, Integer> wordCount = new HashMap<>();
+
+        try {
+            // Create sample file if it doesn't exist
+            createSampleFile(filePath);
+
+            // Read file line by line
+            try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+                String line;
+
+                while ((line = br.readLine()) != null) {
+                    String[] words = line.toLowerCase().split("\\s+");
+
+                    for (String word : words) {
+                        word = word.replaceAll("[.,!?\"()\\[\\]]", "");
+                        wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Print word counts
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}

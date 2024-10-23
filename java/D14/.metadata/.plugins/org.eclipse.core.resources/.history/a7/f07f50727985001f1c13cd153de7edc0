@@ -1,0 +1,32 @@
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileIO {
+
+	
+	public static void writeData()
+	{
+		try (FileOutputStream fos = new FileOutputStream("Employee.db")){
+			try(DataOutputStream dos = new DataOutputStream(fos)){
+				dos.writeInt(e.empid);
+				dos.writeUTF(e.name);14
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void readDate()
+	{
+		
+	}
+	public static void main(String[] args) {
+		Employee e = new Employee(01, "Anil", 10000);
+	}
+}

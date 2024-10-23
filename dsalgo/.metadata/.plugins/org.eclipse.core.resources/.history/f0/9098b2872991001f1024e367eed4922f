@@ -1,0 +1,57 @@
+package Assignment_7_3;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class WordCountInFile {
+    public static void main(String[] args) {
+        // Provide the absolute path to the sample.txt file
+        String filePath = "C:\\Users\\YourUsername\\path\\to\\sample.txt"; // Replace with the actual absolute path
+
+        Map<String, Integer> wordCount = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            
+            // Read file line by line
+            while ((line = br.readLine()) != null) {
+                String[] words = line.toLowerCase().split("\\s+");
+                
+                for (String word : words) {
+                    word = word.replaceAll("[.,!?\"()\\[\\]]", "");
+                    wordCount.put(word, wordCount.getOrDefault(word, 0) + 1
+
+public class WordCountInFile {
+    public static void main(String[] args) {
+        String filePath = "sample.txt"; // Replace with your file path
+
+        // Create a HashMap to store word counts
+        Map<String, Integer> wordCount = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            
+            // Read file line by line
+            while ((line = br.readLine()) != null) {
+                // Convert the line to lowercase and split it into words
+                String[] words = line.toLowerCase().split("\\s+");
+                
+                for (String word : words) {
+                    // Remove common punctuation
+                    word = word.replaceAll("[.,!?\"()\\[\\]]", "");
+                    wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Print word counts
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}

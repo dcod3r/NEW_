@@ -1,0 +1,8 @@
+package sunbeam;
+
+class SalariedCommissionEmployee extends CommissionEmployee{
+	
+	private double base_salary;
+	
+	
+}

@@ -1,0 +1,50 @@
+
+package com.app.fruits;
+
+import java.util.Scanner;
+
+public class FruitBasket {
+	
+	public static int menu(Scanner sc)
+	{
+		
+		System.out.println("0 . Exit ");
+		System.out.println("1 . ADD MANGO ");
+		System.out.println("2 . ADD ORANGE ");
+		System.out.println("3 . ADD APPLE ");
+		System.out.println("4 . DISPLAY NAMES OF ALL FRUITS IN BASKET ");
+		System.out.println("5 . DISPLAY EVERYTHING IN BASKET ");
+		System.out.println("6 . DISPLAY TASTE OF ALL STALE FRUITS INT THE BASKET ");
+		System.out.println("7 . MARK A FRUIT AS STALE ");
+		System.out.println("8 . MARKS ALL SOUR FRUIT STALE\n ");
+		System.out.println("Enter your Choice");
+		
+		int choice = sc.nextInt();
+		return choice;
+	}
+	public static void main(String[] args) {
+		
+		System.out.print("Enter the Size of the Basket : ");
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		
+		FruitBasket[] fruitList = new FruitBasket[size];
+		int choice;
+		do
+		{
+			choice = menu(sc);
+			switch(choice)
+			{
+			case 0:
+				System.out.println("Exiting...................");
+				System.exit(1);
+			break;
+			case 1: 
+			break;
+			default : 
+				System.out.println("ENTER A VALID CHOICE");
+			}
+			
+		}while (choice >= 0);
+	}
+}

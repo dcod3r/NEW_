@@ -1,0 +1,17 @@
+package com.sun.tester;
+
+import java.util.Scanner;
+
+public class TestOfEmp {
+
+	public static int menu()
+	{
+		Scanner sc = new Scanner(System.in);
+		int choice;
+		System.out.println("Enter");
+		choice = sc.nextInt();
+	}
+	public static void main(String[] args) {
+		
+	}
+}

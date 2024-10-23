@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class WaysToCreatingStream {
+
+	public static void main(String[] args) {
+		
+		Collection<Integer> list = new ArrayList<Integer>() {{
+			add(1);
+			add(2);
+			add(3);
+			add(4);
+		}};
+		
+		//Type 1 : Using stream() menthod
+		list.stream().forEach(e -> System.out.print(e + " "));
+	}
+
+}

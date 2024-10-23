@@ -1,0 +1,9 @@
+package com.app.fruits;
+
+public class Mango extends Fruits {
+
+	public String taste()
+	{
+		return "sour";
+	}
+}

@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Assignment2_2 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int choice = menu();
+		do
+		{
+			//choice = menu();
+			switch (choice)
+			{
+				case 0: 
+					
+					break;
+			}
+			
+		}while(choice != 0);
+	}
+	 static int menu()
+		{
+		 	Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter Your Choice \n");
+			System.out.println("Select 0 for Cancel the Order ");
+			System.out.println("Select 1) Dosa - ₹70 Per pc");
+			System.out.println("Select 2) Samosa - ₹15 Per pc");
+			System.out.println("Select 3) Idli - ₹10 Per pc");
+			System.out.println("Select 4) Masala Rice - ₹50 Per plate");
+			System.out.println("Select 5) MOMO - ₹60 Per plate");
+			System.out.println("Select 6) Poha - ₹30 Per plate");
+			System.out.println("Select 7) Utappam - ₹35 Per plate");
+			System.out.println("Select 8) Sabudalan - ₹40 Per plate");
+			System.out.println("Select 9) Bread Pakoda - ₹20 Per pc");
+			System.out.println("Select 10) Generate Bill..........");
+			int choice = sc.nextInt();
+			return choice; 
+		}
+}

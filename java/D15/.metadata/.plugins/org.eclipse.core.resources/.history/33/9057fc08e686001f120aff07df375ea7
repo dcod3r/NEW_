@@ -1,0 +1,21 @@
+package com.practice.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class SelectLessSalaryLessThan {
+
+	public static void main(String[] args) {
+		final String URL = "jdbc:mysql://localhost:3306/classwork";
+		final String USER = "D6_87105_Pawan";
+		final String PASS = "pasword";
+
+		//Establish Connection
+		tyr(Connection connection = DriverManager.getConnection(URL,USER,PASS))
+		{
+			
+		}
+	}
+}

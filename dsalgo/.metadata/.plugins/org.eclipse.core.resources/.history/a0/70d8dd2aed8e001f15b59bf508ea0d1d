@@ -1,0 +1,16 @@
+
+public class RecFact {
+
+	public static int fact(int n)
+	{
+		if(n == 0)
+			return 1;
+		//System.out.println("Anupam");
+		return n*fact(n-1);
+		System.out.println("Anupam");
+	}
+	public static void main(String[] args) {
+		int n = 3;
+		fact(n);
+	}
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Assin1 {
+
+	public static void main(String[] args) {
+		double d1;
+		double d2;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the D1 vlaue :");
+		d1 = sc.nextDouble();
+		System.out.println("Enter the D2 vlaue :");
+		d2 = sc.nextDouble();
+		
+		if(sc.hasNextDouble())
+		{
+			System.out.println("The sum of double values is "+ (d1+d2));
+		}
+		else
+		{
+			System.out.println("Enter a Double Value");
+		}
+	}
+}

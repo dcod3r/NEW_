@@ -1,0 +1,27 @@
+package com.app.geometry;
+
+public class Point2D {
+	private int x;
+	private int y;
+	
+	public String getDetails()
+	{
+		String ans = "(" + x + " , " + y + ")";
+		return ans ;
+	}
+	public boolean isEqual()
+	{
+		if(x == y)
+			return true;
+		return false;
+	}
+	public int calculateDistance(Point2D p1, Point2D p2 )
+	{
+		int ans = 0;
+		if(p1.x == p2.x && p1.y == p2.y)
+			return ans;
+		
+		
+		return ans;
+	}
+}

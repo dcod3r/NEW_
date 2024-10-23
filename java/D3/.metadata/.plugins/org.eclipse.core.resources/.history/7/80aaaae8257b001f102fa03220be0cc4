@@ -1,0 +1,8 @@
+package java.assignment;
+
+public class Invoice {
+    private String partno;
+    private String partdesc;
+    private int qty;
+    private double pprice;
+}

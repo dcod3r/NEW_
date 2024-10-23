@@ -1,0 +1,24 @@
+package sunbeam;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestEmployee {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Welcome to our Application\n");
+	
+		System.out.println("1. SALARIED EMPLOYEE");
+		System.out.println("2. HOURLY EMPLOYEE");
+		System.out.println("3. SALARIED COMMISSION EMPLOYEE");
+		System.out.println("ENTER YOUR CHOICE");
+		
+		Scanner s = new Scanner(System.in);
+		int choice = s.nextInt();
+		
+		ArrayList<Employee> empList= new ArrayList();
+		
+		
+	}
+}

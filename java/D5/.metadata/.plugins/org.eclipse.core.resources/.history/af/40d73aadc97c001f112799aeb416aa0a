@@ -1,0 +1,16 @@
+package sunbeam;
+
+class SalariedEmployee extends Employee{
+	private double weeklySalary;
+
+	public SalariedEmployee(double weeklySalary) {
+		super();
+		this.weeklySalary = weeklySalary;
+	}
+
+	public SalariedEmployee(String firstName, String lastName, int sSN,double weeklySalary) {
+		super(firstName,lastName,sSN);
+		this.weeklySalary = weeklySalary;
+	}
+	
+	

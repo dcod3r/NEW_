@@ -1,0 +1,28 @@
+package Assignment_7_3;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class WordCountInLine {
+    public static void main(String[] args) {
+        String line = "This is a sample line, this line is just a sample.";
+        
+        // Convert the line to lowercase and split it into words
+        String[] words = line.toLowerCase().split("\\s+");
+        
+        // Create a HashMap to store word counts
+        Map<String, Integer> wordCount = new HashMap<>();
+        
+        for (String word : words) {
+            // Remove common punctuation
+            word = word.replaceAll("[.,!?\"()\\[\\]]", "");
+            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+        }
+        
+        // Print word counts
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+

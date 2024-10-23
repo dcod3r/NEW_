@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.practice.jdbc.Using&apos; to &apos;SelectLessSalaryLessThan&apos;&#x0D;&#x0A;- Original project: &apos;Jdbc&apos;&#x0D;&#x0A;- Original element: &apos;com.practice.jdbc.Using&apos;&#x0D;&#x0A;- Renamed element: &apos;com.practice.jdbc.SelectLessSalaryLessThan&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Using&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.practice.jdbc{Using.java[Using" matchStrategy="1" name="SelectLessSalaryLessThan" qualified="false" references="true" similarDeclarations="false" stamp="1728541173601" textual="false" version="1.0"/>
+</session>

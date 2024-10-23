@@ -1,0 +1,12 @@
+package com.practice.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class TestingJbdc01 {
+
+	public static void main(String[] args) {
+		
+		Connection connection = DriverManager.getConnection("jdbc : mysql : // loacalhost :: 3306 / Employee", "D6_87105_Pawan", "password")
+	}
+}
